@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Schema;
 use Encore\Admin\Config\Config;
+use Swoole\Exception;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,13 +28,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $table = config('admin.extensions.config.table', 'admin_config');
-        if (Schema::hasTable($table)) {
-            Config::load();
+        if(env('ADMIN_CONFIG',false)){
+            $table = config('admin.extensions.config.table', 'admin_config');
+            if (Schema::hasTable($table)) {
+                Config::load();
+            }
+            //web预加载配置
+            app(ShareInfoService::class)->webInfo();
         }
-        //web预加载配置
-        app(ShareInfoService::class)->webInfo();
-
         Relation::morphMap([
             'article' => 'App\Models\Notes\Article',
             'music' => 'App\Models\Collect\Music\SongList',
