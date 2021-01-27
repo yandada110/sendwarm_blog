@@ -67,7 +67,7 @@ class TagController extends AdminController
 
         $form->switch('tag_status', __('admin.status'))->states(config('system.switch'))->default(1);
 
-        $form->number('tag_sort', __('排序'))->rules('required')->default(0);
+        $form->number('tag_sort', __('排序'))->rules('required')->default(1);
 
         return $form;
     }

@@ -6,11 +6,11 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{processing_files($configs['base.website_icon'])}}">
     <link rel="icon" type="image/png" href="{{processing_files($configs['base.website_icon'])}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>{{$configs['base.website_seo_title']}}</title>
+    <title>{{$configs['base.website_title']}}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="keywords" content="{{$configs['base.website_seo_keyword']}}">
-    <meta name="description" content="{{$configs['base.website_seo_desc']}}">
+    <meta name="keywords" content="{{$configs['base.website_keyword']}}">
+    <meta name="description" content="{{$configs['base.website_desc']}}">
     <!--     字体和图标     -->
     <link href="{{__STATIC_WEB__}}/assets/css/fonts-googleapis.css" rel="stylesheet" />
     <link href="{{__STATIC_WEB__}}/fontawesome-free-5.10.1-web/css/all.min.css" rel="stylesheet">

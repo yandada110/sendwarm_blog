@@ -2,9 +2,9 @@
 
 namespace App\Models\Website;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
-class Notice extends Model
+class Notice extends BaseModel
 {
     const TABLE = 'sw_notice';
 

@@ -9,8 +9,8 @@
     <title>{{$configs['base.website_title']}}-@yield('title')</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="keywords" content="{{$configs['base.website_seo_keyword']}}">
-    <meta name="description" content="{{$configs['base.website_seo_desc']}}">
+    <meta name="keywords" content="{{$configs['base.website_keyword']}}">
+    <meta name="description" content="{{$configs['base.website_desc']}}">
     {{--字体和图标--}}
     <link href="{{asset(__STATIC_WEB__)}}/assets/css/google-fonts/fonts-googleapis.css" rel="stylesheet" />
     <link href="{{asset(__STATIC_WEB__)}}/fontawesome-free-5.10.1-web/css/all.min.css" rel="stylesheet">

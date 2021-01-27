@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
-use \App\Models\Notes\TagGable;
+use \App\Models\Tag\TagGable;
 
 class CreateTagGablesTable extends Migration
 {

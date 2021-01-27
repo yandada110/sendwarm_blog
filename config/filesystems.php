@@ -66,7 +66,7 @@ return [
         ],
 
         'admin' => [
-            'driver' => 'local',
+            'driver' => 'qiniu',
             'root' => public_path('uploads'),
             'visibility' => 'public',
             'url' => env('APP_URL').'/uploads',

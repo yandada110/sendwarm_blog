@@ -2,7 +2,6 @@
 
 namespace App\Admin\Controllers\Website;
 
-use App\Models\Notes\Tag;
 use App\Models\Website\Nav;
 use App\Models\Website\Notice;
 use Encore\Admin\Controllers\AdminController;
@@ -40,7 +39,7 @@ class NoticeController extends AdminController
 
         $grid->column('notice_show', __('是否显示'))->using([1 => '显示', 2 => '隐藏']);
 
-        $grid->column('created_at', __('添加时间'));
+        $grid->column('created_at', __('添加时间'))->sortable();
 
         //搜索条件
         $grid->filter(function (Grid\Filter $filter) {

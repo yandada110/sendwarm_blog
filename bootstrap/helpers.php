@@ -48,9 +48,11 @@ function date_conversion($old_data){
 
 /**
  * Desc:处理文件是本地上传还是七牛云上传的路径
- * Date:2019/11/6/006
+ * @param string $file_src
+ * @return string
  */
 function processing_files($file_src){
+    $new_src = '';
     if(env('UPLOAD_TYPE') == 'admin'){
         $new_src = asset(__STATIC_UPLOADS__.'/'.$file_src);
     }elseif (env('UPLOAD_TYPE') == 'qiniu'){

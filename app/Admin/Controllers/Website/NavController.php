@@ -78,7 +78,7 @@ class NavController extends AdminController
 
                 $form->switch('nav_open', '是否启用')->states(config('system.states'))->default(true);
 
-                $form->number('nav_sort', '导航排序')->default(100)->rules('integer|between:1,99999');
+                $form->number('nav_sort', '导航排序')->default(1)->rules('integer|between:1,99999');
 
                 $column->append($form);
             });

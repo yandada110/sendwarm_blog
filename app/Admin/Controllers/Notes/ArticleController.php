@@ -124,7 +124,7 @@ class ArticleController extends AdminController
 
         $form->switch('article_show', __('是否显示'))->states(config('system.show'))->default(1);
 
-        $form->number('article_sort', __('admin.sort'))->rules('required')->default(100);
+        $form->number('article_sort', __('admin.sort'))->rules('required')->default(1);
 
         $form->number('article_click', __('点击量'))->rules('required')->default(0);
 

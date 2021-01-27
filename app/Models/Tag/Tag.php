@@ -2,10 +2,10 @@
 
 namespace App\Models\Tag;
 
+use App\Models\BaseModel;
 use App\Models\Notes\Article;
-use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Tag extends BaseModel
 {
     const TABLE = 'sw_tag';
 

@@ -2,13 +2,13 @@
 
 namespace App\Models\Notes;
 
+use App\Models\BaseModel;
 use App\Models\Tag\Tag;
 use App\Models\Tag\TagGable;
 use App\Models\Website\Nav;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Article extends Model
+class Article extends BaseModel
 {
     const TABLE = 'sw_article';
 
@@ -49,7 +49,7 @@ class Article extends Model
     {
         return $this->morphToMany(Tag::class, TagGable::TABLE);
     }
-
+   
     /**
      * 导航栏
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
