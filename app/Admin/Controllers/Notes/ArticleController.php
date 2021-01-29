@@ -3,16 +3,12 @@
 namespace App\Admin\Controllers\Notes;
 
 use App\Models\Notes\Article;
-use App\Models\Tag\TagGable;
 use App\Models\Website\Nav;
 use App\Models\Tag\Tag;
-use App\Services\Tag\TagService;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\DB;
 
 class ArticleController extends AdminController
 {

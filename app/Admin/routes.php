@@ -5,9 +5,9 @@ use Illuminate\Routing\Router;
 Admin::routes();
 
 Route::group([
-    'prefix'        => config('admin.route.prefix'),
-    'namespace'     => config('admin.route.namespace'),
-    'middleware'    => config('admin.route.middleware'),
+    'prefix' => config('admin.route.prefix'),
+    'namespace' => config('admin.route.namespace'),
+    'middleware' => config('admin.route.middleware'),
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
@@ -47,6 +47,12 @@ Route::group([
             $router->resource('video/list', VideoController::class);
         });
     });
+    #分享模块
+    Route::namespace('share')->group(function ($router) {
+        #文章管理
+        $router->resource('share/list', ShareController::class);
+    });
+
 
     #公共模块
     Route::namespace('Common')->group(function ($router) {

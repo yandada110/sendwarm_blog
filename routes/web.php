@@ -11,7 +11,6 @@ Route::namespace('Web')->name('web.')->group(function () {
         });
         #内容模块
         Route::namespace('Notes')->name('notes.')->group(function () {
-            #article
             //文章
             Route::match(['get', 'post'], 'article/{nav_id?}', 'ArticleController@index')->name('article.index');
             //文章详情
@@ -20,7 +19,6 @@ Route::namespace('Web')->name('web.')->group(function () {
 
         #收藏模块
         Route::namespace('Collect')->name('collect.')->group(function () {
-            #article
             //歌单列表
             Route::match(['get', 'post'], 'music/{nav_id?}', 'MusicController@index')->name('music.index');
             //音乐列表
@@ -33,6 +31,12 @@ Route::namespace('Web')->name('web.')->group(function () {
             Route::match(['get', 'post'], 'video/{nav_id?}', 'VideoController@index')->name('video.index');
             //播放视频
             Route::get('video/{videos}/detail', 'VideoController@detail')->name('video.detail');
+        });
+        #分享模块
+        Route::namespace('Share')->name('share.')->group(function () {
+            //分享列表
+            Route::match(['get', 'post'], 'share/{share_id?}', 'ShareController@index')->name('music.index');
+
         });
     });
     Route::get('about', 'Home\AboutController@index')->name('about');

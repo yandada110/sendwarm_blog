@@ -11,7 +11,6 @@ use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
 use Encore\Admin\Show;
-use Illuminate\Support\MessageBag;
 
 class NavController extends AdminController
 {
