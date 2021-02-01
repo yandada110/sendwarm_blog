@@ -109,7 +109,7 @@ class ArticleRepository
         //获取徽章颜色
         $badge_arr = ['primary', 'info', 'success', 'warning', 'danger', 'default'];
         //点击量自增
-        $article::query()->increment('article_click');
+        $article::query()->where('id', $article->id)->increment('article_click');
 
         return view('web.notes.article.article_detail', compact('article', 'article_url', 'badge_arr', 'articleID', 'tags'));
     }

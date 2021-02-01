@@ -52,18 +52,18 @@
     </div>
 </nav>
 <!-- 导航栏结束 -->
-<div class="page-header section-dark" style="background-image: url('{{__STATIC_WEB__}}/assets/img/trisomy.jpg')">
+<div class="page-header section-dark" style="background-image: url('{{__STATIC_WEB__}}/assets/img/fenglinggongzhu.jpg')">
     <div class="filter"></div>
     <div class="content-center">
         <div class="container">
             <div class="title-brand">
                 <h1 class="presentation-title">偶成</h1>
-                <div class="fog-low">
-                    <img src="{{__STATIC_WEB__}}/assets/img/fog-low.png" alt="">
-                </div>
-                <div class="fog-low right">
-                    <img src="{{__STATIC_WEB__}}/assets/img/fog-low.png" alt="">
-                </div>
+                {{--<div class="fog-low">--}}
+                    {{--<img src="{{__STATIC_WEB__}}/assets/img/fog-low.png" alt="">--}}
+                {{--</div>--}}
+                {{--<div class="fog-low right">--}}
+                    {{--<img src="{{__STATIC_WEB__}}/assets/img/fog-low.png" alt="">--}}
+                {{--</div>--}}
             </div>
             <h2 class="presentation-subtitle text-center">少年易老学难成，一寸光阴不可轻。</h2>
             <h2 class="presentation-subtitle text-center">未觉池塘春草梦，阶前梧叶已秋声。 </h2>
