@@ -33,7 +33,7 @@ return [
         ]
     ],
     'default' => [
-        'disk' => 'qiniu',//默认磁盘
+        'disk' => 'local',//默认磁盘
         'extensions' => 'jpg,png,mp4',//后缀
         'mimeTypes' => 'image/*,video/*',//类型
         'fileSizeLimit' => 10737418240,//上传文件限制总大小，默认10G,默认单位为b
