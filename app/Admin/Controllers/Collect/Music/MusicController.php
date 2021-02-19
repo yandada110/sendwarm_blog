@@ -101,7 +101,7 @@ class MusicController extends AdminController
 
         $form->image('music_img', '封面图')->required()->removable();
 
-        $form->chunk_file('music_url', '歌曲播放链接')->attribute('accept', 'mp4/*');
+        $form->chunk_file('music_url', '歌曲播放链接');
 
         $form->number('article_click', __('点击量'))->rules('required')->default(0);
 
