@@ -95,8 +95,8 @@ return [
 
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => env('STORAGE_NAME') . 'images',
-            'file' => env('STORAGE_NAME') . 'files',
+            'image' => 'images',
+            'file' => 'files',
         ],
     ],
 

@@ -2,11 +2,10 @@
 
 namespace App\Models\Website;
 
+use App\Models\BaseModel;
 use Encore\Admin\Traits\AdminBuilder;
 use Encore\Admin\Traits\ModelTree;
-use Illuminate\Database\Eloquent\Model;
-
-class Nav extends Model
+class Nav extends BaseModel
 {
     use ModelTree, AdminBuilder;
 

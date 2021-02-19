@@ -16,7 +16,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('QINIU_DOMAIN').'/storage',
+            'url' => env('QINIU_DOMAIN'),
         ],
         'qiniu' => [//七牛云
             'driver' => 'qiniu',

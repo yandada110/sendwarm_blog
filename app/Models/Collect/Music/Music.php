@@ -2,10 +2,10 @@
 
 namespace App\Models\Collect\Music;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 use Illuminate\Support\Str;
 
-class Music extends Model
+class Music extends BaseModel
 {
     const TABLE = 'sw_music';
 
