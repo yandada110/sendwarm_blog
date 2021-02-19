@@ -26,14 +26,18 @@
                         @foreach($article_list as $k => $v)
                             <div class="col-md-6">
                                 <div class="card" data-color="{{$background_color[$k]}}" data-background="color">
-                                    <div class="card-body text-center">
+                                    <div class="card-body text-center" style="height: 225px">
                                         <h6 class="card-category">
                                             <i class="fa fa-tree" aria-hidden="true"></i>
-                                            {{$configs['base.website_title']}} -- {{$v->article_title}}
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">                                                       {{$configs['base.website_title']}} -- {{Str::limit($v->article_title,80)}}
+                                                </font>
+                                            </font>
+
                                         </h6>
                                         <h5 class="card-title">
                                             <a href="/article/{{$v->id}}/detail">
-                                                {{$v->article_title}}
+                                                {{--{{$v->article_title}}--}}
                                             </a>
                                         </h5>
                                         <p class="card-description" style="height: 70px;">

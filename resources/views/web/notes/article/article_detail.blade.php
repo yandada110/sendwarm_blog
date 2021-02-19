@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 mr-auto ml-auto">
+            <div class="col-sm-3 mr-auto ml-auto fixedBox">
                 <div class="row">
                     <div id="toc"></div>
                 </div>
@@ -323,5 +323,16 @@
             }
             document.oncopy = addCopyRight;
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            var menuYloc = $(".fixedBox").offset().top; //此ID为随着屏幕滚动div的ID
+            $(window).scroll(function () {
+                var Tops = $(window).scrollTop();
+                var offsetTop =  Tops + "px";
+                if(Tops > 0) offsetTop =  Tops - 100 + "px";
+                $(".fixedBox").animate({ top: offsetTop }, { duration: 100, queue: false }); //此ID为随着屏幕滚动div的ID
+            });
+        });
     </script>
 @endsection
