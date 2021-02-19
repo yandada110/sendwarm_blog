@@ -2,12 +2,12 @@
 
 namespace App\Models\Collect\Video;
 
+use App\Models\BaseModel;
 use App\Models\Tag\Tag;
 use App\Models\Tag\TagGable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Video extends Model
+class Video extends BaseModel
 {
     const TABLE = 'sw_video';
 

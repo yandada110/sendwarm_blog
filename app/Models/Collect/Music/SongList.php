@@ -2,12 +2,12 @@
 
 namespace App\Models\Collect\Music;
 
+use App\Models\BaseModel;
 use App\Models\Tag\Tag;
 use App\Models\Tag\TagGable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class SongList extends Model
+class SongList extends BaseModel
 {
     const TABLE = 'sw_song_list';
 

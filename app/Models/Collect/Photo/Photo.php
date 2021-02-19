@@ -2,12 +2,12 @@
 
 namespace App\Models\Collect\Photo;
 
+use App\Models\BaseModel;
 use App\Models\Tag\Tag;
 use App\Models\Tag\TagGable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Photo extends Model
+class Photo extends BaseModel
 {
     const TABLE = 'sw_photo';
 
@@ -25,7 +25,7 @@ class Photo extends Model
 
     protected $casts = [
         'photo_show' => 'boolean',
-        'photo_json' => 'json',
+//        'photo_json' => 'json',
     ];
 
     /**
@@ -60,15 +60,20 @@ class Photo extends Model
     public function setPhotoJsonAttribute($photo_json)
     {
         $images = [];
-        foreach ($photo_json as $value){
+        foreach ($photo_json as $value) {
             if (!Str::startsWith($value, ['http://', 'https://'])) {
                 $images[] = 'http://' . env('QINIU_DOMAIN') . '/' . $value;
-            }else{
+            } else {
                 $images[] = $value;
             }
         }
         if (!empty($images)) {
             $this->attributes['photo_json'] = json_encode($images);
         }
+    }
+
+    public function getPhotoJsonAttribute($photo_json)
+    {
+        return json_decode($photo_json, true);
     }
 }
