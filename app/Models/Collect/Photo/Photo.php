@@ -25,7 +25,7 @@ class Photo extends BaseModel
 
     protected $casts = [
         'photo_show' => 'boolean',
-//        'photo_json' => 'json',
+        'photo_json' => 'json',
     ];
 
     /**
@@ -69,11 +69,8 @@ class Photo extends BaseModel
         }
         if (!empty($images)) {
             $this->attributes['photo_json'] = json_encode($images);
+        }else{
+            $this->attributes['photo_json'] = '';
         }
-    }
-
-    public function getPhotoJsonAttribute($photo_json)
-    {
-        return json_decode($photo_json, true);
     }
 }
