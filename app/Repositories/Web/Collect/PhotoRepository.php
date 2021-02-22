@@ -64,6 +64,6 @@ class PhotoRepository
         //点击量自增
         $photos::query()->increment('photo_click');
 
-        return view('web.collect.photo.photo_details', compact('photos', 'badge_arr', 'tags'));
+        return view('web.collect.photo.photo_details', compact('photos'));
     }
 }

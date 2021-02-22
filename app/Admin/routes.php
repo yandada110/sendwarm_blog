@@ -48,7 +48,7 @@ Route::group([
         });
     });
     #分享模块
-    Route::namespace('share')->group(function ($router) {
+    Route::namespace('Share')->group(function ($router) {
         #文章管理
         $router->resource('share/list', ShareController::class);
     });
