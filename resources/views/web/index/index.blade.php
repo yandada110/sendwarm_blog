@@ -52,7 +52,7 @@
     </div>
 </nav>
 <!-- 导航栏结束 -->
-<div class="page-header section-dark" style="background-image: url('{{__STATIC_WEB__}}/assets/img/fenglinggongzhu.jpg')">
+<div class="page-header section-dark" style="background-image: url('{{processing_files($configs['base.home_background'])}}')">
     <div class="filter"></div>
     <div class="content-center">
         <div class="container">
