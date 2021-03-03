@@ -35,7 +35,7 @@ class ShareController extends AdminController
 
         $grid->column('share_title', __('标题'))->editable();
 
-        $grid->column('share_icon', __('icon'))->image('', 50, 50);
+        $grid->column('share_src', __('icon'))->image('', 50, 50);
 
         $grid->column('share_show', __('是否显示'))->switch(config('system.switch'));
 
