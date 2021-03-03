@@ -41,7 +41,7 @@
                             </p>
                             <div class="card-footer">
                                 <a href="#pablo" class="btn btn-info btn-round card-link" data-toggle="modal"
-                                   data-target="#myModal">
+                                   data-target="#myModal{{$v->id}}">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;"> 查看详情</font>
                                     </font>
@@ -50,36 +50,37 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-        <!-- 软件弹出分享详情start -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             style="display: none;" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                        <h5 class="modal-title text-center" id="exampleModalLabel">PhpStorm详情描述</h5>
-                    </div>
-                    <div class="modal-body">
-                        {{$v->share_describe}}
-                    </div>
-                    <div class="modal-footer">
-                        <div class="right-side">
-                            <a href="{{$v->share_link}}" target="_blank">
-                                <button type="button" class="btn btn-success btn-link">下载</button>
-                            </a>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="left-side">
-                            <button type="button" class="btn btn-default btn-link" data-dismiss="modal">确定</button>
+                <!-- 软件弹出分享详情start -->
+                <div class="modal fade" id="myModal{{$v->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{$v->id}}"
+                     style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <h5 class="modal-title text-center" id="exampleModalLabel{{$v->id}}">{{$v->share_title}}详情描述</h5>
+                            </div>
+                            <div class="modal-body">
+                                {{$v->share_describe}}
+                            </div>
+                            <div class="modal-footer">
+                                <div class="right-side">
+                                    <a href="{{$v->share_link}}" target="_blank">
+                                        <button type="button" class="btn btn-success btn-link">下载</button>
+                                    </a>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="left-side">
+                                    <button type="button" class="btn btn-default btn-link" data-dismiss="modal">确定</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
+
         <!-- 软件弹出分享详情end -->
         <div class="col-sm-12">
             <div class="pagination-area mt-3">
