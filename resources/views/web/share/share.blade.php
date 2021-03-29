@@ -62,12 +62,12 @@
                                 <h5 class="modal-title text-center" id="exampleModalLabel{{$v->id}}">{{$v->share_title}}详情描述</h5>
                             </div>
                             <div class="modal-body">
-                                {{$v->share_describe}}
+                                <textarea >{{$v->share_describe}}</textarea>
                             </div>
                             <div class="modal-footer">
                                 <div class="right-side">
                                     <a href="{{$v->share_link}}" target="_blank">
-                                        <button type="button" class="btn btn-success btn-link">下载</button>
+                                        <button type="button" class="btn btn-success btn-link">下载1</button>
                                     </a>
                                 </div>
                                 <div class="divider"></div>
